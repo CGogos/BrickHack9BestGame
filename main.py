@@ -204,7 +204,7 @@ def i886():
 @bottle.route("/Home/367f6fefccf408b1c688158c6a0777c2.jpg")
 def i846():
     return bottle.static_file("./DRAFT/Home/367f6fefccf408b1c688158c6a0777c2.jpg", root='.')
-@bottle.route("/Home/367f6fefccf408b1c688158c6a0777c2.jpg")
+@bottle.route("/Home/1f822e11db5663e1a6f41665d33da882.jpg")
 def i8453():
     return bottle.static_file("./DRAFT/Home/1f822e11db5663e1a6f41665d33da882.jpg", root='.')
 
