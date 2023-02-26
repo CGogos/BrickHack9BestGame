@@ -1,0 +1,64 @@
+<html>
+
+  <head>
+    <title>Home Page</title>
+    <script src="./script.js"></script>
+  </head>
+
+  <body>
+    <div style="position: static; visibility: visible;"><a href="./Home.html" >Click Here To Go Home</a></div>
+    <image src='https://freepngimg.com/thumb/telephone/8-2-telephone-transparent.png' id="AiImage" height=256px width=256px style="position: static; visibility: visible;"></image>
+    <!-- start stuff before rounds start -->
+    <div id="initial" style="position: absolute; visibility: visible;">
+    <p id="playersP">How many players?</p>
+    <input type ='number' id='playerNum' placeholder="Type how many players here"></input>
+      <br>
+      <br>
+    <button onclick="sendSettings();" id="startbtn">Start Game</button>
+      
+      </div>
+     <p id="roundsP" style="position: absolute; visibility: hidden;">How many rounds?</p>
+    <input type ='number' id='genNum' placeholder="Type how many rounds" style="position: absolute; visibility: hidden;"></input>
+    <!-- generating stuff Initiall hidden --> 
+
+    <!-- initial 1st prompt without an ai image -->
+    <div id="1st" style="position: absolute; visibility: hidden;">
+    <p id="say">What do you want your prompt to be?</p>
+    <input type='text' id="Prompt" placeholder="Enter prompt here" > </input>
+    <br>
+      <br>
+    <button onclick="GenerateImage();" id="generatebtn" >Generate Image</button>
+  </div>
+    
+    <!-- after initial generation after we have a image to see.-->
+    <div id="2nd" style="position: absolute; visibility: hidden;">
+    <p id="see" >What do you see?</p>
+    <input type="text" id="s" placeholder="Enter what you see here" ></input>
+    <br>
+    <br>
+    <button onclick="guess();"  id="guessbtn">Generate Image</button>
+    </div>
+    <br>
+    <br>
+    <button onclick="last();"id="results" style="position: absolute; visibility: hidden;">Results</button>
+    <!-- results -->
+    <div id="end" style="position: absolute; visibility: hidden;">
+    
+    <h2 id="R" >Prompt: Insert Prompt here</h2>
+    
+    <image id='endImg' src='https://media1.giphy.com/media/y1ZBcOGOOtlpC/200w.gif?cid=6c09b952k65mjm5fjx7d9avsb9ku345bs5x843gavbi8arhz&rid=200w.gif&ct=g' height=256px width=256px ></image>
+      <br>
+      <br>
+    
+    <button onclick="back();"  id="left"> <- </button>
+    
+    <button onclick="reset();"  id="reset"> reset </button>
+    
+    <button onclick="next();"  id="right"> -> </button>
+    
+    </div>
+    <button onclick="nextRound();"  id='nextround' style="visibility: hidden">Next Round</button>
+    
+  </body>
+  
+</html>
