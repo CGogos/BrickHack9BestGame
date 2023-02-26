@@ -32,6 +32,8 @@ function GenerateImage() {
   let out=JSON.stringify(prompt)
   document.getElementById("AiImage").src = loadingPlaceholder
   document.getElementById("1st").style.visibility = "hidden";
+  document.getElementById("s").value=""
+  
   //document.getElementById("img1").style.position = "static;"
   ajaxPostRequest("imageGen",out,ShowImage)
   
@@ -39,6 +41,7 @@ function GenerateImage() {
 function ShowImage(response){
   let data=JSON.parse(response)
   //document.getElementById("AiImage").style.visibility = "visible";
+  document.getElementById("s").value=""
   
   document.getElementById("AiImage").src=data
   document.getElementById("AiImage").style.visibility = "visible;"
@@ -75,6 +78,9 @@ function guess() {
   document.getElementById("AiImage").style.visibility = "visible;"
   document.getElementById("AiImage").src = loadingPlaceholder
   let prompt=document.getElementById("s").value;
+  document.getElementById("s").value=""
+  document.getElementById("s").innerHTML=""
+  document.getElementById("s").placeholder="Input What you see"
   //console.log(prompt)
   let out=JSON.stringify(prompt)
   console.log(prompt)
@@ -83,6 +89,9 @@ function guess() {
 }
 function guessed(response){
   let data=JSON.parse(response)
+  document.getElementById("s").value=""
+  document.getElementById("s").innerHTML=""
+  document.getElementById("s").placeholder="Input What you see"
   if(data["end"]){
     document.getElementById("AiImage").src=data["u"]
     document.getElementById("results").style.visibility = "visible";
@@ -99,6 +108,7 @@ function last(){
   ajaxPostRequest("end",out,lastDone)
 }
 function lastDone(response){
+  document.getElementById("s").value=""
    let data=JSON.parse(response)
   imageList=data["iList"]
   textList=data["tList"]

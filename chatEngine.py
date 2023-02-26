@@ -25,7 +25,7 @@ def ai(playerPrompt):
   response = openai.Image.create(
     prompt=playerPrompt,
     n=1,
-    size="256x256"
+    size="512x512"
   )
   image_url = response['data'][0]['url']
   return image_url

@@ -3,13 +3,23 @@
   <head>
     <title>Home Page</title>
     <script src="./script.js"></script>
+    <style>
+      body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+    </style>
+    
   </head>
 
   <body>
     <div style="position: static; visibility: visible;"><a href="./Home.html" >Click Here To Go Home</a></div>
-    <image src='https://freepngimg.com/thumb/telephone/8-2-telephone-transparent.png' id="AiImage" height=256px width=256px style="position: static; visibility: visible;"></image>
+    <image src='https://freepngimg.com/thumb/telephone/8-2-telephone-transparent.png' id="AiImage" height=256px width=256px style="position: static; visibility: visible;display: block; margin-left: auto;margin-right: auto;"></image>
+    <p style="position: static;""></p>
     <!-- start stuff before rounds start -->
-    <div id="initial" style="position: absolute; visibility: visible;">
+    <div id="initial" style="position: absolute; visibility: visible;" >
     <p id="playersP">How many players?</p>
     <input type ='number' id='playerNum' placeholder="Type how many players here"></input>
       <br>
